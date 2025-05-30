@@ -176,6 +176,78 @@
         flex-direction: column;
         gap: 10px;
       }
+
+
+
+      .explore-card {
+      height: 120px;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .explore-card:hover {
+      transform: scale(1.05);
+    }
+
+    .explore-card .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .country-card {
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .country-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .country-card:hover {
+      transform: scale(1.05);
+    }
+
+    .country-card p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .dish-icon {
+      width: 100px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .dish-icon img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .dish-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .dish-icon p {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
     }
   </style>
 </head>
@@ -219,6 +291,61 @@
         <div class="slide"><img src="gambar/rujakcingur.jpg" alt=""></div>
       </div>
     </div>
+  </section>
+
+
+
+
+
+
+  <!-- Section 2 -->
+  <section style="padding: 60px 5%; background-color: #f8f8f8; color: #333;">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #146C74;">Jelajahi Kelezatan Dunia</h2>
+
+  <!-- A. Jelajahi Berdasarkan Benua/Negara -->
+  <div style="margin-bottom: 60px;">
+    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Benua</h3>
+    <div style="display: flex; overflow-x: auto; gap: 20px; padding-bottom: 10px;">
+      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
+        <div class="overlay">Asia</div>
+      </div>
+      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
+        <div class="overlay">Eropa</div>
+      </div>
+      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
+        <div class="overlay">Amerika</div>
+      </div>
+      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
+        <div class="overlay">Afrika</div>
+      </div>
+      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
+        <div class="overlay">Australia</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Negara Populer</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
+      <div class="country-card"><img src="gambar/jepang.jpg" alt="Jepang"><p>Jepang</p></div>
+      <div class="country-card"><img src="gambar/italia.jpg" alt="Italia"><p>Italia</p></div>
+      <div class="country-card"><img src="gambar/indonesia.jpg" alt="Indonesia"><p>Indonesia</p></div>
+      <div class="country-card"><img src="gambar/meksiko.jpg" alt="Meksiko"><p>Meksiko</p></div>
+      <div class="country-card"><img src="gambar/perancis.jpg" alt="Prancis"><p>Prancis</p></div>
+    </div>
+  </div>
+
+  <!-- B. Jelajahi Berdasarkan Jenis Hidangan -->
+  <div style="margin-top: 60px;">
+    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Jenis Hidangan</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <div class="dish-icon"><img src="icon/appetizer.png" alt="Appetizer"><p>Makanan Pembuka</p></div>
+      <div class="dish-icon"><img src="icon/main.png" alt="Main Dish"><p>Hidangan Utama</p></div>
+      <div class="dish-icon"><img src="icon/dessert.png" alt="Dessert"><p>Makanan Penutup</p></div>
+      <div class="dish-icon"><img src="icon/drink.png" alt="Drink"><p>Minuman</p></div>
+      <div class="dish-icon"><img src="icon/snack.png" alt="Snack"><p>Camilan</p></div>
+    </div>
+  </div>
   </section>
 
 </body>
