@@ -4,252 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Explore Indonesia</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background: #146C74;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 5%;
-      background-color: rgba(0, 0, 0, 0.3);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-   .logo-container img {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white; /* opsional, untuk garis putih mengelilingi */
-}
-
-
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #FFD700;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 120px 5% 50px;
-      background: url('https://images.unsplash.com/photo-1586705282338-68f112ad4b93?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
-      min-height: 100vh;
-      flex-wrap: nowrap;
-      gap: 20px;
-    }
-
-    .content {
-      width: 40%;
-      max-width: 100%;
-    }
-
-    .content h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .content h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #ddd;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #ddd;
-    }
-
-    .btn {
-      padding: 12px 30px;
-      font-size: 1rem;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    .slider-container {
-      width: 50%;
-      overflow: hidden;
-      position: relative;
-      border-radius: 12px;
-    }
-
-    .slider-track {
-      display: flex;
-      width: max-content;
-      animation: scroll 20s linear infinite;
-    }
-
-    .slide {
-      min-width: 300px;
-      height: 400px;
-      margin-right: 20px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      flex-shrink: 0;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .slide:hover img {
-      transform: scale(1.05);
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 160px;
-      }
-
-      .content,
-      .slider-container {
-        width: 100%;
-      }
-
-      .slide {
-        min-width: 250px;
-        height: 300px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-
-
-      .explore-card {
-      height: 120px;
-      border-radius: 12px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    .explore-card:hover {
-      transform: scale(1.05);
-    }
-
-    .explore-card .overlay {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      width: 100%;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-weight: bold;
-      border-radius: 0 0 12px 12px;
-    }
-
-    .country-card {
-      text-align: center;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    .country-card img {
-      width: 100%;
-      border-radius: 10px;
-      height: 100px;
-      object-fit: cover;
-    }
-
-    .country-card:hover {
-      transform: scale(1.05);
-    }
-
-    .country-card p {
-      margin-top: 8px;
-      font-weight: bold;
-    }
-
-    .dish-icon {
-      width: 100px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .dish-icon img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
-
-    .dish-icon:hover {
-      transform: scale(1.1);
-    }
-
-    .dish-icon p {
-      margin-top: 8px;
-      font-size: 0.9rem;
-    }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -274,7 +29,7 @@
       <h1>WorldFlavors</h1>
       <h3>One Planet. Infinite Tastes</h3>
       <p>Setiap hidangan menyimpan cerita — tentang tradisi, tentang manusia, tentang tempat. Mulailah petualanganmu sekarang.</p>
-      <button class="btn">Explore</button>
+      <button class="btn" onclick="exploreNow()">Explore</button>
     </div>
 
     <div class="slider-container">
@@ -284,7 +39,7 @@
         <div class="slide"><img src="gambar/nasiliwetsolo.jpg" alt=""></div>
         <div class="slide"><img src="gambar/rujakcingur.jpg" alt=""></div>
 
-        <!-- DUPLICATE for looping -->
+        <!-- DUPLICATE for loop -->
         <div class="slide"><img src="gambar/gudeg.webp" alt=""></div>
         <div class="slide"><img src="gambar/lumpiasemarang.jpeg" alt=""></div>
         <div class="slide"><img src="gambar/nasiliwetsolo.jpg" alt=""></div>
@@ -293,60 +48,120 @@
     </div>
   </section>
 
-
-
-
-
-
   <!-- Section 2 -->
-  <section style="padding: 60px 5%; background-color: #f8f8f8; color: #333;">
-  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #146C74;">Jelajahi Kelezatan Dunia</h2>
-
-  <!-- A. Jelajahi Berdasarkan Benua/Negara -->
-  <div style="margin-bottom: 60px;">
-    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Benua</h3>
-    <div style="display: flex; overflow-x: auto; gap: 20px; padding-bottom: 10px;">
-      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
-        <div class="overlay">Asia</div>
-      </div>
-      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
-        <div class="overlay">Eropa</div>
-      </div>
-      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
-        <div class="overlay">Amerika</div>
-      </div>
-      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
-        <div class="overlay">Afrika</div>
-      </div>
-      <div class="explore-card" style="min-width: 180px; background-image: url('gambar/lumpiasemarang.jpeg');">
-        <div class="overlay">Australia</div>
+  <section class="section-explore">
+    <h2>Jelajahi Kelezatan Dunia</h2>
+    
+    <div class="explore-benua">
+      <h3>Berdasarkan Benua</h3>
+      <div class="scroll-x">
+        <div class="explore-card" data-benua="Asia" style="background-image: url('gambar/lumpiasemarang.jpeg');">
+          <div class="overlay">Asia</div>
+        </div>
+        <div class="explore-card" data-benua="Eropa" style="background-image: url('gambar/lumpiasemarang.jpeg');">
+          <div class="overlay">Eropa</div>
+        </div>
+        <div class="explore-card" data-benua="Amerika" style="background-image: url('gambar/lumpiasemarang.jpeg');">
+          <div class="overlay">Amerika</div>
+        </div>
+        <div class="explore-card" data-benua="Afrika" style="background-image: url('gambar/lumpiasemarang.jpeg');">
+          <div class="overlay">Afrika</div>
+        </div>
+        <div class="explore-card" data-benua="Australia" style="background-image: url('gambar/lumpiasemarang.jpeg');">
+          <div class="overlay">Australia</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div>
-    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Negara Populer</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
-      <div class="country-card"><img src="gambar/jepang.jpg" alt="Jepang"><p>Jepang</p></div>
-      <div class="country-card"><img src="gambar/italia.jpg" alt="Italia"><p>Italia</p></div>
-      <div class="country-card"><img src="gambar/indonesia.jpg" alt="Indonesia"><p>Indonesia</p></div>
-      <div class="country-card"><img src="gambar/meksiko.jpg" alt="Meksiko"><p>Meksiko</p></div>
-      <div class="country-card"><img src="gambar/perancis.jpg" alt="Prancis"><p>Prancis</p></div>
+    <div class="explore-negara">
+      <h3>Berdasarkan Negara Populer</h3>
+      <div class="grid-negara">
+        <div class="country-card" data-benua="Asia">
+          <img src="gambar/lumpiasemarang.jpeg" alt="Jepang" />
+          <p>Jepang</p>
+        </div>
+        <div class="country-card" data-benua="Eropa">
+          <img src="gambar/lumpiasemarang.jpeg" alt="Italia" />
+          <p>Italia</p>
+        </div>
+        <div class="country-card" data-benua="Asia">
+          <img src="gambar/lumpiasemarang.jpeg" alt="Indonesia" />
+          <p>Indonesia</p>
+        </div>
+        <div class="country-card" data-benua="Amerika">
+          <img src="gambar/lumpiasemarang.jpeg" alt="Meksiko" />
+          <p>Meksiko</p>
+        </div>
+        <div class="country-card" data-benua="Eropa">
+          <img src="gambar/lumpiasemarang.jpeg" alt="Prancis" />
+          <p>Prancis</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- B. Jelajahi Berdasarkan Jenis Hidangan -->
-  <div style="margin-top: 60px;">
-    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Berdasarkan Jenis Hidangan</h3>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-      <div class="dish-icon"><img src="icon/appetizer.png" alt="Appetizer"><p>Makanan Pembuka</p></div>
-      <div class="dish-icon"><img src="icon/main.png" alt="Main Dish"><p>Hidangan Utama</p></div>
-      <div class="dish-icon"><img src="icon/dessert.png" alt="Dessert"><p>Makanan Penutup</p></div>
-      <div class="dish-icon"><img src="icon/drink.png" alt="Drink"><p>Minuman</p></div>
-      <div class="dish-icon"><img src="icon/snack.png" alt="Snack"><p>Camilan</p></div>
+    <div class="explore-hidangan">
+      <h3>Berdasarkan Jenis Hidangan</h3>
+      <div class="flex-hidangan">
+        <div class="dish-icon" data-benua="Asia">
+          <img src="gambar/rujakcingur.jpg" alt="Makanan Pembuka" />
+          <p>Makanan Pembuka</p>
+        </div>
+        <div class="dish-icon" data-benua="Eropa">
+          <img src="gambar/rujakcingur.jpg" alt="Hidangan Utama" />
+          <p>Hidangan Utama</p>
+        </div>
+        <div class="dish-icon" data-benua="Asia">
+          <img src="gambar/rujakcingur.jpg" alt="Makanan Penutup" />
+          <p>Makanan Penutup</p>
+        </div>
+        <div class="dish-icon" data-benua="Eropa">
+          <img src="gambar/rujakcingur.jpg" alt="Minuman" />
+          <p>Minuman</p>
+        </div>
+        <div class="dish-icon" data-benua="Asia">
+          <img src="gambar/rujakcingur.jpg" alt="Camilan" />
+          <p>Camilan</p>
+        </div>
+      </div>
     </div>
-  </div>
   </section>
 
+  <!-- Section 3 -->
+  <section class="featured-destination">
+    <h2>Destinasi Pilihan Minggu Ini</h2>
+    <div class="destination-container">
+      <div class="destination-card">
+        <img src="gambar/nasiliwetsolo.jpg" alt="Forest Wild Life" />
+        <div class="destination-info">
+          <h3>Forest Wild Life</h3>
+          <p><i class="location-icon"></i> NRT, Indonesia</p>
+          <p class="destination-desc">Nikmati pengalaman kuliner alami di tengah hutan Indonesia dengan rasa otentik dan suasana tradisional.</p>
+          <button class="destination-btn">Lihat Detail</button>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="gambar/nasiliwetsolo.jpg" alt="Forest Wild Life" />
+        <div class="destination-info">
+          <h3>Forest Wild Life</h3>
+          <p><i class="location-icon"></i> NRT, Indonesia</p>
+          <p class="destination-desc">Nikmati pengalaman kuliner alami di tengah hutan Indonesia dengan rasa otentik dan suasana tradisional.</p>
+          <button class="destination-btn">Lihat Detail</button>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="gambar/nasiliwetsolo.jpg" alt="Forest Wild Life" />
+        <div class="destination-info">
+          <h3>Forest Wild Life</h3>
+          <p><i class="location-icon"></i> NRT, Indonesia</p>
+          <p class="destination-desc">Nikmati pengalaman kuliner alami di tengah hutan Indonesia dengan rasa otentik dan suasana tradisional.</p>
+          <button class="destination-btn">Lihat Detail</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
