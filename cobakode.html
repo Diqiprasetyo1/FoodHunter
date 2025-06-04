@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest Stories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans text-gray-800">
+  <div class="p-6 max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-[#146c74]">Latest Stories</h2>
+      <button class="bg-[#146c74] text-white px-4 py-2 rounded hover:bg-[#0e555b] transition">See More Stories</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Main Story -->
+      <a href="https://example.com/artikel-utama" class="flex flex-col md:flex-row bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
+        <img src="gambar/gudeg.webp" alt="Main Story" class="w-full md:w-1/2 h-60 object-cover">
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <p class="text-sm text-[#146c74] font-semibold mb-1">Best Story Food</p>
+            <h3 class="text-xl font-bold mb-2">Los Angeles food & drink guide: 10 things to try in Los Angeles, California</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Here are 10 must-try dishes and drinks that define the culinary landscape of LA, from taco trucks to fusion bites.
+            </p>
+          </div>
+          <p class="text-xs text-gray-500">Inggris</p>
+        </div>
+      </a>
+
+      <!-- Side Stories -->
+      <div class="grid gap-4">
+        <!-- Story Item -->
+        <a href="https://example.com/london-markets" class="flex gap-4 bg-white shadow rounded p-2 hover:shadow-lg transition">
+          <img src="gambar/gudeg.webp" alt="Story" class="w-24 h-24 object-cover rounded">
+          <div class="text-sm">
+            <p class="text-xs text-[#146c74] font-semibold mb-1">Best Story Food</p>
+            <h4 class="font-bold mb-1">10 South London Markets You’ll Love: Best Markets in South London</h4>
+            <p class="text-xs text-gray-500">Amerika</p>
+          </div>
+        </a>
+
+        <a href="https://example.com/hotels-budget-2024" class="flex gap-4 bg-white shadow rounded p-2 hover:shadow-lg transition">
+          <img src="gambar/gudeg.webp" alt="Story" class="w-24 h-24 object-cover rounded">
+          <div class="text-sm">
+            <p class="text-xs text-[#146c74] font-semibold mb-1">Best Story Food</p>
+            <h4 class="font-bold mb-1">10 incredible hotels around the world you can book on a budget in 2024</h4>
+            <p class="text-xs text-gray-500">Indonesia</p>
+          </div>
+        </a>
+
+        <a href="https://example.com/chicago-budget" class="flex gap-4 bg-white shadow rounded p-2 hover:shadow-lg transition">
+          <img src="gambar/gudeg.webp" alt="Story" class="w-24 h-24 object-cover rounded">
+          <div class="text-sm">
+            <p class="text-xs text-[#146c74] font-semibold mb-1">Best Story Food</p>
+            <h4 class="font-bold mb-1">Visiting Chicago on a Budget: Affordable Eats and Attraction Deals</h4>
+            <p class="text-xs text-gray-500">Meksiko</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

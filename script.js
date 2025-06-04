@@ -25,10 +25,14 @@ benuaCards.forEach(card => {
     negaraCards.forEach(negara => {
       negara.style.display = negara.getAttribute('data-benua') === selectedBenua ? 'block' : 'none';
     });
-
-    // Filter hidangan
-    hidanganCards.forEach(hidangan => {
-      hidangan.style.display = hidangan.getAttribute('data-benua') === selectedBenua ? 'block' : 'none';
-    });
   });
 });
+
+// latest-stories.js
+document.getElementById('moreBtn').addEventListener('click', () => {
+  alert("Redirect to full story page!");
+});
+
+
+
+
