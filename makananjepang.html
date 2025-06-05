@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makanan dan Minuman Jepang</title>
+    <link rel="stylesheet" href="makananjepang.css">
+</head>
+<body>
+
+    <!-- HEADER + NAVBAR -->
+<header class="navbar">
+  <div class="navbar-logo">
+    <img src="gambar/Logo.jpg" alt="WorldFlavors Logo" />
+    <span>WorldFlavors</span>
+  </div>
+  <nav class="navbar-menu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Kategori</h3>
+      <ul>
+        <li><button onclick="filterKategori('makanan')">🍱 Makanan</button></li>
+        <li><button onclick="filterKategori('minuman')">🍵 Minuman</button></li>
+      </ul>
+    </aside>
+
+    <!-- Konten -->
+    <main class="content">
+      <div id="grid" class="card-grid">
+
+        <!-- Makanan -->
+        <div class="card kategori-makanan">
+          <img src="gambar/sushi.jpg" alt="Sushi">
+          <h4>Sushi</h4>
+          <button onclick="window.location.href='sejarah_sushi.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-makanan">
+          <img src="gambar/ramen.jpg" alt="Ramen">
+          <h4>Ramen</h4>
+          <button onclick="window.location.href='sejarah_ramen.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-makanan">
+          <img src="gambar/tempura.jpg" alt="Tempura">
+          <h4>Tempura</h4>
+          <button onclick="window.location.href='sejarah_tempura.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-makanan">
+          <img src="gambar/okonomiyaki.jpg" alt="Okonomiyaki">
+          <h4>Okonomiyaki</h4>
+          <button onclick="window.location.href='sejarah_okonomiyaki.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-makanan">
+          <img src="gambar/takoyaki.jpg" alt="Takoyaki">
+          <h4>Takoyaki</h4>
+          <button onclick="window.location.href='sejarah_takoyaki.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-makanan">
+          <img src="gambar/katsudon.jpg" alt="Katsudon">
+          <h4>Katsudon</h4>
+          <button onclick="window.location.href='sejarah_katsudon.html'">Lihat Sejarah</button>
+        </div>
+
+        <!-- Minuman -->
+        <div class="card kategori-minuman" style="display:none;">
+          <img src="gambar/matcha.jpg" alt="Matcha">
+          <h4>Matcha</h4>
+          <button onclick="window.location.href='sejarah_matcha.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-minuman" style="display:none;">
+          <img src="gambar/sake.jpg" alt="Sake">
+          <h4>Sake</h4>
+          <button onclick="window.location.href='sejarah_sake.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-minuman" style="display:none;">
+          <img src="gambar/umeshu.jpg" alt="Umeshu">
+          <h4>Umeshu</h4>
+          <button onclick="window.location.href='sejarah_umeshu.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-minuman" style="display:none;">
+          <img src="gambar/ramune.jpg" alt="Ramune">
+          <h4>Ramune</h4>
+          <button onclick="window.location.href='sejarah_ramune.html'">Lihat Sejarah</button>
+        </div>
+        <div class="card kategori-minuman" style="display:none;">
+          <img src="gambar/oolongtea.jpg" alt="Oolong Tea">
+          <h4>Oolong Tea</h4>
+          <button onclick="window.location.href='sejarah_oolong.html'">Lihat Sejarah</button>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function filterKategori(kategori) {
+      const makanan = document.querySelectorAll('.kategori-makanan');
+      const minuman = document.querySelectorAll('.kategori-minuman');
+
+      if (kategori === 'makanan') {
+        makanan.forEach(item => item.style.display = 'block');
+        minuman.forEach(item => item.style.display = 'none');
+      } else if (kategori === 'minuman') {
+        makanan.forEach(item => item.style.display = 'none');
+        minuman.forEach(item => item.style.display = 'block');
+      }
+    }
+
+    // Default tampil makanan
+    filterKategori('makanan');
+  </script>
+</body>
+</html>
